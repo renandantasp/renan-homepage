@@ -10,14 +10,14 @@ const Project = () =>{
     <Container>
       <Title>DEX <Badge>2021-</Badge></Title>
       <P>
-        A Pokedex application for visualizing pokémon's stats, types and weaknesses with 
-        data fetched from the <Link href="https://pokeapi.co/">PokéAPI</Link>. 
+        A Pokédex application for visualizing pokémon's stats, types and weaknesses with 
+        data fetched from the <Link isExternal={true} href="https://pokeapi.co/">PokéAPI</Link>. 
         A WIP study project.
       </P>
       <List my={4} ml={5}>
         <ListItem>
-          <MetaData>website</MetaData> Not hosted yet
-          {/* <MetaData>website</MetaData> <Link href="#">https://nothostedyet.com <ExternalLinkIcon/></Link> */}
+          {/* <MetaData>website</MetaData> Not hosted yet */}
+          <MetaData>website</MetaData> <Link isExternal={true} href="https://pokedexdex.herokuapp.com/"> Pokedexdex <ExternalLinkIcon/></Link>
         </ListItem>
         <ListItem>
           <MetaData>stack</MetaData> Vue.js, Nuxt.js, Sass, TailwindCSS
@@ -31,8 +31,6 @@ const Project = () =>{
       </List>
       <ModalImage src="/images/pokedex1.png" alt="DEX Home" />
       <ModalImage src="/images/pokedex2.png" alt="DEX Pokémon Page" />
-      {/* <ProjectImage src="/images/pokedex1.png" alt="Pokedex Home Screenshot" /> */}
-      {/* <ProjectImage src="/images/pokedex2.png" alt="Pokedex Pokemon Screenshot" /> */}
     </Container>
   );
 }

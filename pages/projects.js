@@ -14,7 +14,7 @@ const Project = () => {
       <SimpleGrid columns={[1,1,2]} gap={6}>
         <Section>
           <WorkGridItem id="pokedex" title="DEX" thumbnail="/images/thumb-pokedex.png">
-          A Pokedex application built with Vue.js with data fetched from the PokeApi.
+          A Pokédex application built with Vue.js with data fetched from the PokéApi.
           </WorkGridItem>
         </Section>
         <Section>
