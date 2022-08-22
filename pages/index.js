@@ -1,8 +1,10 @@
-import { Container, Box, Heading, Image, Button, Link, List, ListItem, Icon, useColorModeValue } from '@chakra-ui/react'
+import { Container, Box, Heading, Image, Button, Link, List, ListItem, Icon, useColorModeValue, Badge } from '@chakra-ui/react'
 import NextLink from 'next/link'
 import Section from '../components/section'
 import Paragraph from '../components/paragraph'
-import {StatAtr} from '../components/stats'
+import {StatAtr, StatSec} from '../components/stats'
+import { MetaData } from '../components/project'
+
 import { ChevronRightIcon } from '@chakra-ui/icons'
 
 import {
@@ -42,21 +44,26 @@ const Page = () => {
                     Bio
                 </Heading>
                 <Paragraph>
-                <Link href="https://github.com/renandantasp">Renan</Link> is an undergraduate computer science student based in São Carlos - SP with an interest in front end development, currently learning to work with Vue.js and React.js. When not coding, he really loves painting, videogames and discovering new music.
+                <Link href="https://github.com/renandantasp">Renan</Link> is an undergraduate computer science student based in São Carlos - SP with an interest in front-end development, currently working with Vue.js and React.js. When not coding, he really loves painting, videogames and discovering new music.
                 </Paragraph>
                 <Section delay={0.1}>
+                <Heading as="h3" variant="section-title">
+                    Professional Experience
+                </Heading>
+                <MetaData>2022-</MetaData> Junior Developer at Redação Nota 1000 <br/>
+
                 <Heading as="h3" variant="section-title">
                     Skills
                 </Heading>
                 <StatAtr>
+                    - React, Next <br/>
+                    - Vue, Nuxt <br/>
                     - Python, Spacy, Pandas <br/>
                     - JavaScript, HTML, CSS <br/>
                     - Sass, Tailwind <br/>
-                    - C, C++ <br/>
+                    - SQL, Mongo <br/>
                     - Flask <br/>
-                    - Vue.js <br/>
-                    - React.js <br/>
-                    - SQL <br/>
+                    - C, C++ <br/>
                 </StatAtr>
                 </Section>
 
