@@ -44,7 +44,9 @@ const Page = () => {
                     Bio
                 </Heading>
                 <Paragraph>
-                <Link href="https://github.com/renandantasp">Renan</Link> is an undergraduate computer science student based in São Carlos - SP with an interest in front-end development, currently working with Vue.js and React.js. When not coding, he really loves painting, videogames and discovering new music.
+                <Link href="https://github.com/renandantasp">Renan</Link> is an Front-End Developer with a degree in Computer Science at <Link href="https://www.ufscar.br/">UFSCar</Link>!
+                He's currently working as a Developer at Redação Nota 1000. He has experience working with frameworks like React/Next and Vue/Nuxt. 
+                When not coding, he really loves painting, videogames and discovering new music.
                 </Paragraph>
                 <Section delay={0.1}>
                 <Heading as="h3" variant="section-title">
@@ -56,12 +58,13 @@ const Page = () => {
                     Skills
                 </Heading>
                 <StatAtr>
+                    - JavaScript, TypeScript <br/>
+                    - HTML, CSS <br/>
+                    - Sass, Tailwind <br/>
                     - React, Next <br/>
                     - Vue, Nuxt <br/>
                     - Python, Spacy, Pandas <br/>
-                    - JavaScript, HTML, CSS <br/>
-                    - Sass, Tailwind <br/>
-                    - SQL, Mongo <br/>
+                    - SQL, MongoDB <br/>
                     - Flask <br/>
                     - C, C++ <br/>
                 </StatAtr>

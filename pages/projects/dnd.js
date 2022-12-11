@@ -28,7 +28,7 @@ const Project = () =>{
         </ListItem>
       </List>
       
-      <ModalImage src="/images/dnd.png" alt="Pokedex Screenshot" />
+      <ModalImage src="/images/dnd.png" alt="Spell Screenshot" />
     </Container>
   );
 }
