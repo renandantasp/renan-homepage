@@ -16,8 +16,7 @@ const Project = () =>{
       </P>
       <List my={4} ml={5}>
         <ListItem>
-          <MetaData>website</MetaData> Not hosted yet
-          {/* <MetaData>website</MetaData> <Link isExternal={true} href="https://pokedexdex.herokuapp.com/"> Pokedexdex <ExternalLinkIcon/></Link> */}
+          <MetaData>website</MetaData> <Link isExternal={true} href="https://pokedexdex.vercel.app/"> Pokedexdex <ExternalLinkIcon/></Link>
         </ListItem>
         <ListItem>
           <MetaData>stack</MetaData> Vue.js, Nuxt.js, Sass, TailwindCSS
