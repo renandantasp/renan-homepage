@@ -44,29 +44,28 @@ const Page = () => {
                     Bio
                 </Heading>
                 <Paragraph>
-                <Link href="https://github.com/renandantasp">Renan</Link> is an Front-End Developer with a degree in Computer Science at <Link href="https://www.ufscar.br/">UFSCar</Link>!
-                He's currently working as a Developer at Redação Nota 1000. He has experience working with frameworks like React/Next and Vue/Nuxt. 
+                <Link href="https://github.com/renandantasp">Renan</Link> is a Software Engineer with a Bachelor's degree in Computer Science at <Link href="https://www.ufscar.br/">UFSCar</Link>!
+                He worked as a Developer at Redação Nota 1000. He has experience working with Node, Django, React, Typescript and SASS. He's also have experience
+                with databases SQL and NoSQL like MySQL and MongoDB. He's currently studying Dockerization, Kubernetes, AWS. 
                 When not coding, he really loves painting, videogames and discovering new music.
                 </Paragraph>
                 <Section delay={0.1}>
                 <Heading as="h3" variant="section-title">
                     Professional Experience
                 </Heading>
-                <MetaData>2022-</MetaData> Junior Developer at Redação Nota 1000 <br/>
+                <MetaData>2022-2023</MetaData> Junior Developer at Redação Nota 1000 <br/>
 
                 <Heading as="h3" variant="section-title">
                     Skills
                 </Heading>
                 <StatAtr>
-                    - JavaScript, TypeScript <br/>
-                    - HTML, CSS <br/>
+                    - HTML, CSS, JS, TS <br/>
+                    - NodeJs, Django <br/>
                     - Sass, Tailwind <br/>
                     - React, Next <br/>
                     - Vue, Nuxt <br/>
-                    - Python, Spacy, Pandas <br/>
-                    - SQL, MongoDB <br/>
-                    - Flask <br/>
-                    - C, C++ <br/>
+                    - Python, Flask, Spacy, Pandas <br/>
+                    - MySQL, MongoDB <br/>
                 </StatAtr>
                 </Section>
 
