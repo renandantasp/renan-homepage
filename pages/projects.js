@@ -12,7 +12,12 @@ const Project = () => {
       </Heading>
 
       <SimpleGrid columns={[1,1,2]} gap={6}>
-      <Section>
+        <Section>
+          <WorkGridItem id="dailyhub" title="Dailyhub" thumbnail="/images/thumb-dailyhub.png">
+          A Twitter-like platform made with the MERN Stack.
+          </WorkGridItem>
+        </Section>
+        <Section>
           <WorkGridItem id="kodama" title="Kodama" thumbnail="/images/thumb-kodama.png">
           A Social platform for sharing, discussing and discover new games.
           </WorkGridItem>
