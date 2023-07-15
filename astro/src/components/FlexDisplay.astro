@@ -1,0 +1,15 @@
+---
+export interface Props {
+  title : string
+  array : string[]
+}
+
+const { title, array } = Astro.props
+---
+
+<div class="md:w-3/4">
+  <h2 class="text-xl text-neutral-200 mb-4 font-bold">{title}</h2>
+  <div class="flex flex-row flex-wrap py-2 justify-start">
+    {array.map(item => <p class="w-24 mr-6 mb-4">{item}</p>)}
+  </div>
+</div>

@@ -1,0 +1,99 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Card from '../components/Card.astro';
+import Section from '../components/Section.astro';
+import FlexDisplay from '../components/FlexDisplay.astro';
+import Project from '../components/Project.astro';
+
+const langs : string[] = ["JavaScript", "TypeScript", "Python", "SQL", "C", "C++", "C#", "Lua", "Java"]
+const frameworks : string[] = ["React", "Node", "Next", "Vite", "Redux", "Tailwind", "Vue", "Astro", ".NET", "Django", "Flask", ]
+const miscs : string[] = ["Linux", "Bash", "Git", "SQL", "MongoDB", "Docker", "HTML", "CSS", "SCSS", "English"]
+---
+
+<Layout title="Renan Dantas">
+	<main class="flex flex-col lg:w-[1000px]">
+		<Section title="">
+			<div class="lg:w-3/4 lg:mb-4">
+				<h1 class="text-5xl text-stone-200 font-bold pb-1">Renan Dantas</h1>
+				<h2 class="text-4xl font-bold pb-2 text-stone-400">Full Stack Web Developer</h1>
+				<p class="text-stone-400">
+					Crafting seamless digital experiences, merging front-end artistry and back-end precision.
+				</p>
+				<p class="text-stone-400">
+					Driven full-stack web developer from São Carlos - SP, constantly expanding knowledge and refining skills, currently working at LUZ - Soluções Financeiras.
+				</p>
+			</div>
+		</Section>
+
+		<Section title='EDUCATION'>
+			<Card 
+				date_place='2018-2022, São Carlos - Brazil'
+				title='UFSCar | B. Sc. Computer Science'
+			>
+				<p class="font-bold text-stone-300 text-lg"> 
+					Bachelor of Science
+				</p>
+				<p class="font-medium text-sm"> 
+					Algorithms, Data Structures, Databases, Software Engineering, AI, and System Design. 
+				</p>
+			</Card>
+			<Card 
+				date_place='2016-2017, São Carlos - Brazil'
+				title='ETEC | Game Programming'>
+				<p class="font-bold text-stone-300 text-lg"> 
+					Technical Degree
+				</p>
+				<p>Game Design Principles, Asynchronous Programming, Game Development Frameworks, 3D Modeling, Project Design</p>
+			</Card>
+		</Section>
+
+		<Section title='EXPERIENCE'>
+			<Card 
+				date_place='2023-Present, São Carlos (Hybrid)'
+				title='LUZ Soluções Financeiras'>
+				<p class="font-bold text-stone-300 text-lg"> Full Stack Developer</p>
+				<p> • Utilization .NET framework to develop robust and efficient back-end systems. </p>
+				<p> • Creation of dynamic and user-friendly front-end interfaces with Angular. </p>
+				<p> • Python for web scraping tasks, extracting valuable data for analysis and decision-making.</p>
+				<p> • Effectively manage and persist data, ensuring smooth operations and data integrity with Oracle SQL.</p>
+				
+			</Card>
+			
+			<Card 
+				date_place='2022-2023, São Paulo (Remote)'
+				title='SOMOS Educação'>
+				<p class="font-bold text-stone-300 text-lg"> Full Stack Developer</p>
+				<p> • Design and development of a web interface, that serves and modify data from an API, with React, Next, Redux and Tailwind</p>
+				<p> • Development and maintenence of RESTful APIs with Django, with the usage of MySQL and MongoDB databases</p>
+				<p> • Creation of general solutions and tests for NLP applications using Python and the Spacy framework.</p>
+			</Card>
+		</Section>
+
+		<Section title="SKILLS">
+			
+			<FlexDisplay title="Programming Languages" array={langs} />
+			<FlexDisplay title="Libraries & Frameworks" array={frameworks} />
+			<FlexDisplay title="And more..." array={miscs} />
+
+		</Section>
+
+		<Section title="PROJECTS">
+		
+			<div class="flex flex-row flex-wrap">
+
+				
+				<Project title="KODAMA" descr="Vite, React, Tailwind" link="" from="from-stone-700" to="to-stone-400" />
+				<Project title="DailyHub" descr="MongoDB, Node, Vite, React" link="" from="from-stone-700" to="to-stone-400" />
+				<Project title="Boxd Collage" descr="Node, Vite, React" link="" from="from-stone-700" to="to-stone-400" />
+				<Project title="LeetCode" descr="C, C++, TS, Python" link="" from="from-stone-700" to="to-stone-400" />
+				<Project title="DEX" descr="Nuxt, SCSS" link="" from="from-stone-700" to="to-stone-400" />
+				<Project title="DnDL anguage" descr="Antlr4, Python" link="" from="from-stone-700" to="to-stone-400" />
+			</div>
+
+			
+		</Section>
+
+
+
+	</main>
+</Layout>
