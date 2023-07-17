@@ -1,0 +1,24 @@
+---
+export interface Props {
+  color : Palette
+}
+
+const { color } = Astro.props
+---
+
+<div class=" flex justify-start flex-col lg:flex-row lg:align-start">
+
+  <h2 class=`text-2xl lg:text-right pr-8 font-bold mt-10 mb-4 lg:w-48 lg:m-0 ${color.accent_color} `></h2>
+  <div class="w-full">
+    <div class="lg:w-3/4 lg:mb-4">
+      <a href="https://github.com/renandantasp" class=`text-5xl ${color.main_color} font-bold pb-1 hover:underline`>Renan Dantas</a>
+      <h2 class=`text-4xl font-bold pb-2 ${color.accent_color}`>Full Stack Web Developer</h1>
+      <p class=`${color.secondary_color}`>
+        Crafting seamless digital experiences, merging front-end artistry and back-end precision.
+      </p>
+      <p class=`${color.secondary_color}`>
+        Driven full-stack web developer from São Carlos - SP, constantly expanding knowledge and refining skills, currently working at LUZ - Soluções Financeiras.
+      </p>
+    </div>
+  </div>
+</div>

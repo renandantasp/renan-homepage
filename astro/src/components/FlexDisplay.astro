@@ -2,14 +2,15 @@
 export interface Props {
   title : string
   array : string[]
+  color : Palette
 }
 
-const { title, array } = Astro.props
+const { title, array, color } = Astro.props
 ---
 
 <div class="">
-  <h2 class="text-xl text-neutral-200 mb-4 font-bold">{title}</h2>
-  <div class="flex flex-row flex-wrap py-2 justify-start">
-    {array.map(item => <p class="w-24 mr-16 mb-4">{item}</p>)}
+  <h2 class=`text-xl ${color.main_color} mb-4 font-bold`>{title}</h2>
+  <div class=`flex flex-row flex-wrap py-2 ${color.secondary_color} justify-start`>
+    {array.map(item => <p class="w-24 md:mr-16 mr-4 mb-4">{item}</p>)}
   </div>
 </div>
