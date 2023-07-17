@@ -4,8 +4,7 @@ module.exports = {
 	theme: {
 		extend: {},
 		fontFamily: {
-			spgr: ["Space Grotesk"],
-			pts: ["PT Sans"]
+			spgr: ["Space Grotesk"]
 		}
 	},
 	plugins: [],

@@ -5,7 +5,7 @@ import Section from '../components/Section.astro';
 import FlexDisplay from '../components/FlexDisplay.astro';
 import Project from '../components/Project.astro';
 
-const langs : string[] = ["JavaScript", "TypeScript", "Python", "SQL", "C", "C++", "C#", "Lua", "Java"]
+const langs : string[] = ["JavaScript", "TypeScript", "Python", "C", "C++", "C#", "Java", "Lua"]
 const frameworks : string[] = ["React", "Node", "Next", "Vite", "Redux", "Tailwind", "Vue", "Astro", ".NET", "Django", "Flask", ]
 const miscs : string[] = ["Linux", "Bash", "Git", "SQL", "MongoDB", "Docker", "HTML", "CSS", "SCSS", "English"]
 ---
@@ -14,7 +14,7 @@ const miscs : string[] = ["Linux", "Bash", "Git", "SQL", "MongoDB", "Docker", "H
 	<main class="flex flex-col lg:w-[1000px]">
 		<Section title="">
 			<div class="lg:w-3/4 lg:mb-4">
-				<h1 class="text-5xl text-stone-200 font-bold pb-1">Renan Dantas</h1>
+				<a href="https://github.com/renandantasp" class="text-5xl text-stone-200 font-bold pb-1 hover:underline">Renan Dantas</a>
 				<h2 class="text-4xl font-bold pb-2 text-stone-400">Full Stack Web Developer</h1>
 				<p class="text-stone-400">
 					Crafting seamless digital experiences, merging front-end artistry and back-end precision.
@@ -79,15 +79,57 @@ const miscs : string[] = ["Linux", "Bash", "Git", "SQL", "MongoDB", "Docker", "H
 
 		<Section title="PROJECTS">
 		
-			<div class="flex flex-row flex-wrap">
-
+			<div class="flex flex-row flex-wrap justify-start">
 				
-				<Project title="KODAMA" descr="Vite, React, Tailwind" link="" from="from-stone-700" to="to-stone-400" />
-				<Project title="DailyHub" descr="MongoDB, Node, Vite, React" link="" from="from-stone-700" to="to-stone-400" />
-				<Project title="Boxd Collage" descr="Node, Vite, React" link="" from="from-stone-700" to="to-stone-400" />
-				<Project title="LeetCode" descr="C, C++, TS, Python" link="" from="from-stone-700" to="to-stone-400" />
-				<Project title="DEX" descr="Nuxt, SCSS" link="" from="from-stone-700" to="to-stone-400" />
-				<Project title="DnDL anguage" descr="Antlr4, Python" link="" from="from-stone-700" to="to-stone-400" />
+				<div class="bg-stone-100 h-64 w-48">
+					<p>aosidiasbduas</p>
+				</div>
+
+				<Project 
+					title="KODAMA"
+					type="Full Stack Project" 
+					descr="Vite, React, Tailwind" 
+					link="https://github.com/renandantasp/Kodama" 
+					from="from-stone-700" to="to-stone-400"
+				/>
+
+				<Project 
+					title="DailyHub" 
+					type="Full Stack Project" 
+					descr="MongoDB, Node, Vite, React" 
+					link="https://github.com/renandantasp/dailyhub" 
+					from="from-stone-700" to="to-stone-400" 
+				/>
+				<Project 
+					title="Boxd Collage" 
+					type="" 
+					descr="Node, Vite, React" 
+					link="https://github.com/renandantasp/movie-collage" 
+					from="from-stone-700" to="to-stone-400" 
+				/>
+				<Project 
+					title="LeetCode" 
+					type="Coding Challenges" 
+					descr="C, C++, TS, Python" 
+					link="" 
+					from="from-stone-700" to="to-stone-400" 
+				/>
+				
+				<Project 
+					title="DEX" 
+					type="" 
+					descr="Nuxt, SCSS" 
+					link="https://github.com/renandantasp/pokedex" 
+					from="from-stone-700" to="to-stone-400" 
+				/>
+				
+				<Project 
+					title="DnD Language" 
+					type="Language Interpreter" 
+					descr="Antlr4, Python" 
+					link="https://github.com/renandantasp/compiladores/tree/main/trabalho-4" 
+					from="from-stone-700" to="to-stone-400" 
+				/>
 			</div>
 
 			
