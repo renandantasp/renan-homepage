@@ -1,0 +1,141 @@
+---
+import Layout 			from '../layouts/Layout.astro';
+import Card 				from '../components/Card.astro';
+import Section 			from '../components/Section.astro';
+import FlexDisplay 	from '../components/FlexDisplay.astro';
+import Project 			from '../components/Project.astro';
+import Header 			from '../components/Header.astro';
+
+const langs : string[]      = ["JavaScript", "TypeScript", "Python", "C", "C++", "C#", "Java", "Lua"]
+const frameworks : string[] = ["React", "Node", "Next", "Vite", "Redux", "Tailwind", "Vue", "Astro", ".NET", "Django", "Flask", ]
+const miscs : string[]      = ["Linux", "Bash", "Git", "SQL", "MongoDB", "Docker", "HTML", "CSS", "SCSS", "English"]
+
+
+const color : Palette =  {
+	main_color : "text-stone-200", 
+	secondary_color : "text-stone-400",
+	accent_color : "text-lime-300",
+	gradient_from : "from-emerald-700",
+	gradient_to : "to-lime-300",
+}
+---
+
+<Layout title="Renan Dantas">
+	<main class="flex flex-col lg:w-[1000px]">
+		<Header color={color}/>
+
+		<Section title='EDUCATION' color={color}>
+			<Card 
+				date_place='2018-2022, São Carlos - Brazil'
+				title='UFSCar | B. Sc. Computer Science'
+				color={color}>
+				<p class=`font-bold ${color.accent_color} text-lg`> 
+					Bachelor of Science
+				</p>
+				<p class="font-medium text-sm"> 
+					Algorithms, Data Structures, Databases, Software Engineering, AI, and System Design. 
+				</p>
+			</Card>
+			<Card 
+				date_place='2016-2017, São Carlos - Brazil'
+				title='ETEC | Game Programming'
+				color={color}>
+				<p class=`font-bold ${color.accent_color} text-lg`> 
+					Technical Degree
+				</p>
+				<p>Game Design Principles, Asynchronous Programming, Game Development Frameworks, 3D Modeling, Project Design</p>
+			</Card>
+		</Section>
+
+		<Section title='EXPERIENCE' color={color}>
+			<Card 
+				date_place='2023-Present, São Carlos (Hybrid)'
+				title='LUZ Soluções Financeiras'
+				color={color}>
+				<p class=`font-bold ${color.accent_color} text-lg`> Full Stack Developer</p>
+				<p> • Utilization .NET framework to develop robust and efficient back-end systems. </p>
+				<p> • Creation of dynamic and user-friendly front-end interfaces with Angular. </p>
+				<p> • Python for web scraping tasks, extracting valuable data for analysis and decision-making.</p>
+				<p> • Effectively manage and persist data, ensuring smooth operations and data integrity with Oracle SQL.</p>
+				
+			</Card>
+			
+			<Card 
+				date_place='2022-2023, São Paulo (Remote)'
+				title='SOMOS Educação' 
+				color={color}>
+				<p class=`font-bold ${color.accent_color} text-lg`> Full Stack Developer</p>
+				<p> • Design and development of a web interface, that serves and modify data from an API, with React, Next, Redux and Tailwind</p>
+				<p> • Development and maintenence of RESTful APIs with Django, with the usage of MySQL and MongoDB databases</p>
+				<p> • Creation of general solutions and tests for NLP applications using Python and the Spacy framework.</p>
+			</Card>
+		</Section>
+
+		<Section title="SKILLS" color={color}>
+			
+			<FlexDisplay title="Programming Languages" array={langs} color={color} />
+			<FlexDisplay title="Libraries & Frameworks" array={frameworks} color={color} />
+			<FlexDisplay title="And more..." array={miscs} color={color} />
+
+		</Section>
+
+		<Section title="PROJECTS" color={color}>
+		
+			<div class="flex flex-row flex-wrap justify-start">
+				
+				<Project 
+					title="KODAMA (WIP)"
+					type="Full Stack Project" 
+					descr="Vite, React, Tailwind" 
+					link="https://github.com/renandantasp/Kodama" 
+					color={color}
+				/>
+
+				<Project 
+					title="DailyHub" 
+					type="Full Stack Project, Twitter Clone" 
+					descr="MongoDB, Node, Vite, React" 
+					link="https://github.com/renandantasp/dailyhub" 
+					color={color}
+
+				/>
+				<Project 
+					title="Boxd Collage" 
+					type="Static Site, Collage Generator" 
+					descr="Node, Vite, React" 
+					link="https://github.com/renandantasp/movie-collage" 
+					color={color}
+
+				/>
+				<!-- <Project 
+					title="LeetCode" 
+					type="Coding Challenges" 
+					descr="C, C++, TS, Python" 
+					link="" 
+					color={color}
+				/> -->
+				
+				<Project 
+					title="DEX" 
+					type="Static Site" 
+					descr="Nuxt, SCSS" 
+					link="https://github.com/renandantasp/pokedex" 
+					color={color}
+				/>
+				
+				<Project 
+					title="DnD Language" 
+					type="Language Interpreter" 
+					descr="Antlr4, Python" 
+					link="https://github.com/renandantasp/compiladores/tree/main/trabalho-4" 
+					color={color}
+				/>
+			</div>
+
+			
+		</Section>
+
+
+
+	</main>
+</Layout>

@@ -1,0 +1,22 @@
+---
+export interface Props {
+  title : string
+  descr : string
+  type : string
+  link : string
+  color : Palette
+}
+
+const {title, descr, type, link, color } = Astro.props
+
+---
+
+
+
+<a href={link} class=`md:w-2/5 w-full h-32 md:mr-8 mb-8 rounded-lg p-[3px] bg-gradient-to-tr ${color.gradient_from} ${color.gradient_to}`>
+  <div class="flex flex-col rounded-lg bg-stone-900 items-center justify-center w-full h-full">
+    <p class=`text-xl font-bold ${color.main_color}`>{title}</p>
+    <p class=`${color.secondary_color} text-md`>{type}</p>
+    <p class=`${color.secondary_color} text-md`>{descr}</p>
+  </div>
+</div>
