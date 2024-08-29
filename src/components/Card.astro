@@ -13,10 +13,11 @@ const { date_place, title, color } = Astro.props;
 
 <div class="flex flex-col mb-8" >
   <div class="flex flex-col md:flex-row md:justify-between md:items-center">
+    
     <h2 class=`font-medium md:order-2 ${color.accent_color} md:text-end`>
       {date_place}
     </h2>
-    <h2 class=`font-bold ${color.main_color} text-2xl md:w-2/3`>
+    <h2 class=`font-bold  ${color.main_color} text-2xl md:w-2/3`>
       {title}
     </h2>
   </div>
