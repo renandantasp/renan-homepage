@@ -4,7 +4,7 @@
 
 
 My personal website/portofolio, that is being hosted at <img src="public/favicon.ico" style="width:18px;"> [renandantas.xyz](https://renandantas.xyz)
- where I like to experiment some technologies and designs that I find inspiring.
+ where I like to experiment some technologies and designs that I find interesting.
 
 The current state of my homepeage is built with 
 <img src="https://astro.js.org/astro.png" style="width:18px"/>  [Astro](https://astro.build) and 
