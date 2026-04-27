@@ -1,5 +1,5 @@
 {
-  "name": "",
+  "name": "renan-homepage",
   "type": "module",
   "version": "0.0.1",
   "scripts": {
@@ -10,8 +10,8 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/tailwind": "^4.0.0",
-    "astro": "^2.8.1",
+    "@astrojs/tailwind": "^6.0.2",
+    "astro": "^6.1.9",
     "tailwindcss": "^3.3.2"
   }
 }
