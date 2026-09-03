@@ -1,0 +1,194 @@
+/* Modular hairline grid — full bleed. Every seam is exactly 1px --line,
+   no radius, no shadow, no gradient. Lime is punctuation, not decoration. */
+
+:root {
+  /* surface */
+  --bg: #08090a;
+  --fg: #eef0ee;
+  --fg-2: rgba(238, 240, 238, 0.68);
+  --fg-3: rgba(238, 240, 238, 0.42);
+  --line: rgba(238, 240, 238, 0.1);
+  --line-soft: rgba(238, 240, 238, 0.08);
+  --lime: #a3e635;
+  --lime-hi: #c6f470;
+
+  /* type */
+  --sans: 'Instrument Sans', system-ui, -apple-system, sans-serif;
+  --mono: 'JetBrains Mono', ui-monospace, Menlo, monospace;
+
+  /* rhythm — cell padding is the only spacing scale that matters, and it
+     grows with the viewport so the lattice fills a 16:9 screen. */
+  --pad: clamp(20px, 1.7vw, 34px);
+  --pad-x: clamp(20px, 2vw, 40px);
+  --pad-y: clamp(24px, 2vw, 38px);
+  /* Only guard rail: stop line length from exploding past ultrawide. */
+  --max: 2400px;
+}
+
+* { box-sizing: border-box }
+html { -webkit-text-size-adjust: 100% }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--fg);
+  font-family: var(--sans);
+}
+a { color: var(--lime); text-decoration: none; transition: color .15s ease }
+a:hover { color: var(--lime-hi) }
+a:focus-visible { outline: 2px solid var(--lime); outline-offset: 2px }
+h1, h2, h3 { margin: 0; font-weight: 500 }
+ul { margin: 0; padding: 0; list-style: none }
+
+/* Edge to edge: no border, no card, the viewport is the frame. */
+.page { max-width: var(--max); margin: 0 auto }
+
+/* ---- primitives ------------------------------------------------------ */
+/* Section strip + grid are the whole design system. A new section is a
+   strip plus a grid — never a new pattern. Cells carry border-right and,
+   from the second row on, border-top; the grid itself closes the section
+   with a single border-bottom, so a short row never doubles a line or
+   leaves the section open. */
+.strip {
+  padding: 16px var(--pad-x);
+  border-bottom: 1px solid var(--line);
+  font: 400 11px/1 var(--mono);
+  letter-spacing: .18em;
+  color: var(--lime);
+}
+.grid-2,
+.grid-4 { display: grid; border-bottom: 1px solid var(--line) }
+.grid-2 > *,
+.grid-4 > * { padding: var(--pad-y) var(--pad); border-right: 1px solid var(--line) }
+
+.grid-2 { grid-template-columns: repeat(2, 1fr) }
+.grid-2 > *:nth-child(2n) { border-right: 0 }
+.grid-2 > *:nth-child(n+3) { border-top: 1px solid var(--line) }
+
+.grid-4 { grid-template-columns: repeat(2, 1fr) }
+.grid-4 > *:nth-child(2n) { border-right: 0 }
+.grid-4 > *:nth-child(n+3) { border-top: 1px solid var(--line) }
+
+.label { font: 400 11px/1 var(--mono); letter-spacing: .12em; color: var(--fg-3) }
+.meta { font: 400 12px/1 var(--mono); color: var(--fg-3) }
+
+/* ---- hero ------------------------------------------------------------ */
+.hero {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  border-bottom: 1px solid var(--line);
+}
+.hero-main {
+  padding: clamp(40px, 4.2vw, 80px) clamp(20px, 3.2vw, 64px);
+  border-right: 1px solid var(--line);
+}
+.hero-name { font: 400 clamp(34px, 6.8vw, 124px)/1 var(--mono); letter-spacing: -.045em }
+.hero-name span { color: var(--lime) }
+.hero-title {
+  margin: clamp(18px, 1.6vw, 30px) 0 0;
+  font: 400 clamp(11px, .82vw, 15px)/1 var(--mono);
+  letter-spacing: .18em;
+  color: var(--lime);
+}
+.hero-lede {
+  margin: clamp(20px, 1.8vw, 34px) 0 0;
+  font: 400 clamp(17px, 1.05vw, 21px)/1.55 var(--sans);
+  color: var(--fg-2);
+  max-width: 42ch;
+  text-wrap: pretty;
+}
+.hero-meta { display: flex; flex-direction: column }
+.fact { padding: 22px var(--pad); border-bottom: 1px solid var(--line) }
+.fact:last-child { border-bottom: 0; flex: 1 }
+.fact-val { margin-top: 9px; font: 400 17px/1.3 var(--sans) }
+.fact-val em { font-style: normal; color: var(--lime) }
+.fact-val.mono { font: 400 13.5px/1.55 var(--mono) }
+.reach {
+  margin-top: 9px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font: 400 14px/1.4 var(--mono);
+}
+
+/* ---- experience ------------------------------------------------------ */
+.role, .edu { transition: background .15s ease }
+.role:hover, .edu:hover { background: rgba(238, 240, 238, .02) }
+.role-co { margin: 14px 0 4px; font: 500 21px/1.2 var(--sans) }
+.role-title { font: 400 13.5px/1 var(--mono); color: var(--lime) }
+.role-loc { margin-top: 8px }
+.bullets { margin-top: 18px; display: flex; flex-direction: column; gap: 10px }
+.bullets li {
+  font: 400 14px/1.55 var(--sans);
+  color: var(--fg-2);
+  border-top: 1px solid var(--line-soft);
+  padding-top: 10px;
+}
+
+/* ---- skills ---------------------------------------------------------- */
+/* One flat gray — no primary/secondary emphasis in this section. */
+.skills {
+  margin-top: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font: 400 15px/1 var(--mono);
+  color: var(--fg-2);
+  opacity: .85;
+}
+.skills.two { display: grid; grid-template-columns: 1fr 1fr; gap: 8px }
+
+/* ---- education ------------------------------------------------------- */
+.edu-h { margin: 14px 0 4px; font: 500 22px/1.2 var(--sans) }
+.edu p { margin: 10px 0 0; font: 400 14.5px/1.6 var(--sans); color: var(--fg-2) }
+
+/* ---- contact band ---------------------------------------------------- */
+.cta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+  flex-wrap: wrap;
+  padding: clamp(28px, 2.6vw, 48px) var(--pad-x);
+  background: var(--lime);
+  color: var(--bg);
+}
+.cta-h { font: 500 clamp(24px, 2.2vw, 40px)/1.1 var(--sans); letter-spacing: -.025em }
+.cta a {
+  font: 500 15px/1 var(--mono);
+  color: var(--bg);
+  border-bottom: 1px solid rgba(8, 9, 10, .4);
+  padding-bottom: 3px;
+}
+.cta a:hover { color: var(--bg); border-bottom-color: var(--bg) }
+.cta a:focus-visible { outline-color: var(--bg) }
+
+/* ---- responsive ------------------------------------------------------ */
+/* Wide (16:9 laptops and up): the four roles and the four skill groups
+   each become a single full-width row. */
+@media (min-width: 1240px) {
+  .grid-4 { grid-template-columns: repeat(4, 1fr) }
+  .grid-4 > *:nth-child(2n) { border-right: 1px solid var(--line) }
+  .grid-4 > *:nth-child(4n) { border-right: 0 }
+  .grid-4 > *:nth-child(n+3) { border-top: 0 }
+  .grid-4 > *:nth-child(n+5) { border-top: 1px solid var(--line) }
+}
+@media (max-width: 899px) {
+  .hero { grid-template-columns: 1.4fr 1fr }
+}
+@media (max-width: 719px) {
+  .hero, .grid-2, .grid-4 { grid-template-columns: 1fr }
+  .hero-main { border-right: 0; border-bottom: 1px solid var(--line) }
+  .grid-2 > *, .grid-4 > * { border-right: 0 }
+  .grid-2 > * + *, .grid-4 > * + * { border-top: 1px solid var(--line) }
+  .skills.two { grid-template-columns: 1fr }
+}
+@media (prefers-reduced-motion: reduce) { * { transition: none !important } }
+@media print {
+  body { background: #fff }
+  :root {
+    --bg: #fff; --fg: #000; --fg-2: #333; --fg-3: #666;
+    --line: #ccc; --line-soft: #e0e0e0; --lime: #000; --lime-hi: #000;
+  }
+  .cta { background: #fff; border-top: 2px solid #000 }
+  .role:hover, .edu:hover { background: none }
+}

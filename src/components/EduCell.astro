@@ -1,0 +1,15 @@
+---
+import type { Education } from '../data/education';
+
+export interface Props {
+  entry: Education;
+}
+
+const { entry } = Astro.props;
+---
+
+<article class="edu">
+  <div class="meta">{entry.period} · {entry.location}</div>
+  <h3 class="edu-h">{entry.school} — {entry.degree}</h3>
+  <p>{entry.summary}</p>
+</article>

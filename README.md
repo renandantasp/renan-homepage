@@ -7,7 +7,8 @@ My personal website/portofolio, that is being hosted at <img src="public/favicon
  where I like to experiment some technologies and designs that I find interesting.
 
 The current state of my homepeage is built with 
-<img src="https://astro.js.org/astro.png" style="width:18px"/>  [Astro](https://astro.build) and 
-<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Tailwind_CSS_Logo.svg/1200px-Tailwind_CSS_Logo.svg.png" style="width:18px"/> [Tailwind](https://tailwindcss.com) 
+<img src="https://astro.js.org/astro.png" style="width:18px"/>  [Astro](https://astro.build) and a single plain stylesheet — no CSS framework, no client JS.
+
+Content lives in `src/data` (`experience.ts`, `skills.ts`, `education.ts`, `site.ts`); the components in `src/components` just map over it. The design is a modular hairline grid: a section strip plus a grid is the whole system.
 
 

@@ -1,0 +1,32 @@
+---
+import { site } from '../data/site';
+---
+
+<section class="hero">
+  <div class="hero-main">
+    <h1 class="hero-name">{site.firstName}<br /><span>{site.lastName}</span></h1>
+    <p class="hero-title">{site.title.toUpperCase()}</p>
+    <p class="hero-lede">{site.lede}</p>
+  </div>
+  <div class="hero-meta">
+    <div class="fact">
+      <div class="label">BASE</div>
+      <div class="fact-val">{site.base}</div>
+    </div>
+    <div class="fact">
+      <div class="label">CURRENTLY</div>
+      <div class="fact-val">{site.currently.role}<br /><em>{site.currently.company}</em></div>
+    </div>
+    <div class="fact">
+      <div class="label">SPOKEN</div>
+      <div class="fact-val mono">{site.spoken}</div>
+    </div>
+    <div class="fact">
+      <div class="label">REACH</div>
+      <div class="reach">
+        <a href={`mailto:${site.email}`}>{site.email}</a>
+        {site.links.map((link) => <a href={link.href} rel="noopener">{link.label}</a>)}
+      </div>
+    </div>
+  </div>
+</section>

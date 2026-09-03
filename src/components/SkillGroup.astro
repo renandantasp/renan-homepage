@@ -1,0 +1,16 @@
+---
+import type { SkillGroup } from '../data/skills';
+
+export interface Props {
+  group: SkillGroup;
+}
+
+const { group } = Astro.props;
+---
+
+<div>
+  <div class="label">{group.label}</div>
+  <ul class:list={['skills', group.columns === 2 && 'two']}>
+    {group.items.map((item) => <li>{item}</li>)}
+  </ul>
+</div>

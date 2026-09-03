@@ -1,0 +1,25 @@
+---
+import type { Role } from '../data/experience';
+
+export interface Props {
+  role: Role;
+}
+
+const { role } = Astro.props;
+const range = role.end
+  ? `${role.start} to ${role.end}`
+  : `${role.start} to present`;
+---
+
+<article class="role">
+  <div class="meta" aria-label={range}>
+    <time datetime={role.startISO}>{role.start}</time> →
+    {role.end ? <time datetime={role.endISO}>{role.end}</time> : 'PRESENT'}
+  </div>
+  <h3 class="role-co">{role.company}</h3>
+  <div class="role-title">{role.title}</div>
+  <div class="meta role-loc">{role.location}</div>
+  <ul class="bullets">
+    {role.bullets.map((bullet) => <li>{bullet}</li>)}
+  </ul>
+</article>

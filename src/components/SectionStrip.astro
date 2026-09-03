@@ -1,0 +1,10 @@
+---
+export interface Props {
+  number: string;
+  label: string;
+}
+
+const { number, label } = Astro.props;
+---
+
+<h2 class="strip">{number} — {label}</h2>
